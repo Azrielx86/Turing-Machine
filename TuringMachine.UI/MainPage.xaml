@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TuringMachine.UI.MainPage"
+             BackgroundColor="#1a1a1a">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BackgroundColor" Value="#26a69a"/>
+            <Setter Property="TextColor" Value="#ffffff"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Large"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,Auto,*,Auto" ColumnDefinitions="*,*" Padding="10">
+        <Grid ColumnDefinitions="Auto,*,Auto" Grid.Row="0" Grid.ColumnSpan="2" Padding="5">
+            <Entry Grid.Column="0" Keyboard="Numeric" Placeholder="Número a" x:Name="numberA"/>
+            <Label Grid.Column="1" Text="+" HorizontalTextAlignment="Center" FontSize="Large"/>
+            <Entry Grid.Column="2" Keyboard="Numeric" Placeholder="Número b" x:Name="numberB"/>
+        </Grid>
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Padding="5">
+            <Button Text="Solve" Clicked="OnSolveClicked"/>
+            <Label x:Name="lblSolution" FontSize="Title" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" RowDefinitions="Auto,*">
+            <Label Grid.Row="0" x:Name="lblCurrentState" HorizontalTextAlignment="Center" FontSize="Title"/>
+            <Label Grid.Row="1" x:Name="lblTapeState" HorizontalOptions="Center" FontSize="Large"/>
+        </Grid>
+
+        <Button Grid.Row="3" Grid.Column="0" Text="Previous step" Clicked="OnPrevClicked" x:Name="btnPrev" IsEnabled="False"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Next step" Clicked="OnNextClicked" x:Name="btnNext" IsEnabled="False"/>
+    </Grid>
+</ContentPage>
