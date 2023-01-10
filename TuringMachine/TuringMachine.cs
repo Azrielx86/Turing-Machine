@@ -41,6 +41,7 @@ public class TuringMachine
     public Result Result { get; protected set; }
     public List<char>? Tape { get; protected set; }
     public Dictionary<(States, char), (States, char, Action)>? Transitions { get; set; }
+    public int CurrentPosition { get => _headIdx; }
 
     public string Solve(string inputString)
     {

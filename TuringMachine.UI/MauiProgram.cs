@@ -1,4 +1,6 @@
-﻿namespace TuringMachine.UI
+﻿using SkiaSharp.Views.Maui.Controls.Hosting;
+
+namespace TuringMachine.UI
 {
     public static class MauiProgram
     {
@@ -13,6 +15,7 @@
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.UseSkiaSharp();
             return builder.Build();
         }
     }

@@ -66,6 +66,7 @@ public class StepTuringMachine : TuringMachine
         else
         {
             Solution = string.Join(string.Empty, Tape!).Trim('_');
+            Solved = true;
         }
     }
 
