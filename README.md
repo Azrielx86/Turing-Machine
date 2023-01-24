@@ -23,6 +23,6 @@ I'd still like to finish it, so here's a list of things I'd like to add:
 
 ## Screenshots:
 
-| Solving State                                                        | Result                                                               |
-|----------------------------------------------------------------------|----------------------------------------------------------------------|
-| <img src="screenshots/solving_state.jpg" alt="drawing" width="400"/> | <img src="screenshots/solved_result.jpg" alt="drawing" width="400"/> |
+| Solving State                                            | Result                                                   |
+|----------------------------------------------------------|----------------------------------------------------------|
+| <img src="screenshots/solving_state.jpg" alt="drawing"/> | <img src="screenshots/solved_result.jpg" alt="drawing"/> |
